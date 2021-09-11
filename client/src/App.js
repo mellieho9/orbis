@@ -10,10 +10,10 @@ function App() {
     <div className="App">
       <Navbar/>
       <Switch>
-        <Route path="/login">
+        <Route exact path="/login">
           <Login/>
         </Route>
-        <Route path="/signup">
+        <Route exact path="/signup">
           <Signup/>
         </Route>
       </Switch>

@@ -46,15 +46,24 @@
 
 .signedup {
     display: flex;
-    padding: 50px;
+    padding: 45px;
     font-size: 1.2rem;
 }
 
-.signup a {
-    color: #000;
+.signedup a {
+    color: #00474B;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    width: 75px;
+    justify-content: space-between;
 }
 
-.signup a:hover {
+.signedup a:hover {
     color: #ccc;
+}
+
+.signedup p {
+    display: flex;
+    align-items: center;
 }
