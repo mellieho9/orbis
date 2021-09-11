@@ -7,13 +7,14 @@ const Chat = ({email}) =>{
     useEffect(() => {
 
         const token = sessionStorage.getItem(email);
+        console.log(token);
         const socket = io(ENDPOINT, { transport: ["websocket"], query: {token}});
         socket.on("message", data => {
             setResponse(data);
             console.log('client connected');
         });
 
-        return () => socket.disconnect();
+        return () => socket.disconnect()
 
     }, []);
 
