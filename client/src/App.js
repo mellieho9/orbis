@@ -5,6 +5,7 @@ import Signup from "./components/SignUp/SignUp"
 import Login from "./components/Login/Login"
 import Landing from "./components/Landing/Landing"
 import {useState} from "react"
+import Chat from "./components/Chat/Chat";
 
 function App() {
 
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route path="/signup">
           <Signup setLoggedIn={setLoggedIn}/>
+        </Route>
+        <Route path = "/chat">
+          <Chat/>
         </Route>
       </Switch>
     </div>
