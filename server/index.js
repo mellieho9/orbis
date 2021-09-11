@@ -10,9 +10,7 @@ mongoose.connect(
 const server = require('http').createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
-io.on("connection", socket => {
-console.log(socket.id);
-});
+require('./routes/chat.js')(app, io);
 const port = process.env.PORT || 8080
 const authRoute = require('./routes/auth');
 app.use(bodyParser.urlencoded({ extended: false }))
