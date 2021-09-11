@@ -10,7 +10,8 @@ const Landing = () => {
         <div className = "landing">
             <h1>Hello, what are you up to?</h1>
 
-         
+         <div className="container">
+             
          <div className="productive">
     
              <div className = "productiveDescription">
@@ -45,6 +46,7 @@ const Landing = () => {
 
    
       
+         </div>
      </div>
 
 
