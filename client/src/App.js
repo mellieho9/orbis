@@ -3,18 +3,26 @@ import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import Navbar from "./components/Navbar/Navbar"
 import Signup from "./components/SignUp/SignUp"
 import Login from "./components/Login/Login"
+import Landing from "./components/Landing/Landing"
+import {useState} from "react"
 
 function App() {
+
+  const [isLoggedIn, setLoggedIn] = useState(false)
+
   return (
     <Router>
     <div className="App">
       <Navbar/>
       <Switch>
-        <Route exact path="/login">
-          <Login/>
+        <Route exact path="/">
+          <Landing/>
         </Route>
-        <Route exact path="/signup">
-          <Signup/>
+        <Route path="/login">
+          <Login setLoggedIn={setLoggedIn}/>
+        </Route>
+        <Route path="/signup">
+          <Signup setLoggedIn={setLoggedIn}/>
         </Route>
       </Switch>
     </div>

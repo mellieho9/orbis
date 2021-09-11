@@ -1,20 +1,40 @@
 import "./Login.css"
-import {Link} from "react-router-dom"
+import {Link, useHistory} from "react-router-dom"
+import { useState } from "react"
+import axios from 'axios'
+const Login = ({setLoggedIn}) => {
+    const history = useHistory()
+    const [email, setEmail] = useState("")
+    const [pswd, setPswd] = useState("")
 
-const Login = () => {
+    const submitHandler = async (e) => {
+        e.preventDefault()
+        const body = {
+            "email": email,
+            "password": pswd
+        }
+        setEmail("")
+        setPswd("")
+        await axios.post("http://localhost:8080/api/user/login", body)
+        .then((res)=> {
+            sessionStorage.setItem(email, res.data)
+            setLoggedIn(true)
+            history.push("/")
+        })
+        .catch((err)=> console.log(err))
+    }
+
     return (
       
  <div className = "loginWrapper">
            <div className = "login">
             <h1>Orbis</h1>
             <h2>Enter motto here</h2>
-            <input type="text" name="email" value=""/>
-            <input type="password" name="password" value=""/>
-            <button>Login</button>
+            <input type="text" name="email" placeholder="example@email.com" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+            <input type="password" name="password" placeholder="●●●●●●●●●●●●" value={pswd} onChange={(e)=>setPswd(e.target.value)}/>
+            <button onClick={(e)=>submitHandler(e)}>Login</button>
             
-            <div className="line">
-
-            </div>
+            <div className="line"></div>
 
             <div className = "notLogin">
                 <p>No account?</p>
