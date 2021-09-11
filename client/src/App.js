@@ -6,6 +6,7 @@ import Login from "./components/Login/Login"
 import Landing from "./components/Landing/Landing"
 import {useState} from "react"
 import Logout from "./components/Logout/Logout"
+import Home from "./components/Home/Home"
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Landing/>
+          <Home/>
         </Route>
         <Route path="/login">
           <Login setLoggedIn={setLoggedIn}/>

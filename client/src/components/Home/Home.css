@@ -1,0 +1,20 @@
+.home{
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    flex-direction: column;
+    height: 92vh;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(#FFFFFF, #D0EEEA);
+}
+
+.motto{
+    width: 80vh;
+}
