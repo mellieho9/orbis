@@ -25,25 +25,77 @@
 }
 
 
- .landing button:nth-child(1) {
+ .landing .productive{
         background-image: linear-gradient(to right, #ABECD6 , #FBED96);
  }
 
- .landing button:nth-child(2) {
+ .landing .study{
         background-image: linear-gradient(to right, #2BC0E4 , #EAECC6);
 }
 
-.landing button:nth-child(3) {
+.landing .motivated {
     background-image: linear-gradient(to right, #1A2980, #26D0CE);
 }
 
- .landing button{
+
+
+ .landing div{
     color: white;
     height: 15vh;
     width: 40vw;
     border-radius: 12px;
     border: none; 
+    
   }
+
+  .motivatedDescription{
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      gap: 10px;
+      justify-content: center;
+
+
+  }
+
+  .motivatedImage{
+      margin-left: 450px;
+
+  }
+
+  .studyDescription{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10px;
+    justify-content: center;
+}
+
+.studyImage{
+    margin-left: 450px;
+}
+
+.productiveDescription{
+    display: flex;
+    flex-direction: column;
+    width:2vw;
+    margin-left: 10px;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+.productiveImage{
+    margin-left: 450px;
+}
+
+
+  
+
+  
  
+ 
+
+
 
 
