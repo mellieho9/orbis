@@ -1,0 +1,49 @@
+
+.background{
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+
+}
+
+.landing{
+    height: 92vh;
+    background-image: linear-gradient(#FFFFFF, #26C2AD);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+
+
+}
+
+
+ .landing button:nth-child(1) {
+        background-image: linear-gradient(to right, #ABECD6 , #FBED96);
+ }
+
+ .landing button:nth-child(2) {
+        background-image: linear-gradient(to right, #2BC0E4 , #EAECC6);
+}
+
+.landing button:nth-child(3) {
+    background-image: linear-gradient(to right, #1A2980, #26D0CE);
+}
+
+ .landing button{
+    color: white;
+    height: 15vh;
+    width: 40vw;
+    border-radius: 12px;
+    border: none; 
+  }
+ 
+
+
