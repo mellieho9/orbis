@@ -13,7 +13,7 @@ const Chat = ({email}) =>{
             console.log('client connected');
         });
 
-        return () => socket.disconnect();
+        return () => socket.disconnect()
 
     }, []);
 

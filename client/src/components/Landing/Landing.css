@@ -20,7 +20,7 @@
 }
 
  .landing .productive{
-        background-image: linear-gradient(to right, #ABECD6 , #FBED96);
+        background-image: linear-gradient(to right, #7ed6b9 , #FBED96);
         display: flex;
     align-items: center;
     justify-content: space-between;
@@ -40,7 +40,10 @@
     justify-content: space-between;
 }
 
-
+.landing h6 {
+    width: 25vw;
+    font-size: 1rem;
+}
 
  .landing div{
     color: white;

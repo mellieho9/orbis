@@ -5,16 +5,12 @@ import Signup from "./components/SignUp/SignUp"
 import Login from "./components/Login/Login"
 import Landing from "./components/Landing/Landing"
 import {useState} from "react"
-<<<<<<< HEAD
 import Chat from "./components/Chat/Chat";
-=======
-import Logout from "./components/Logout/Logout"
->>>>>>> c90e0bb13d3a0b9fd482357f6c9c2d4aa848b4d8
 
 function App() {
 
   const [isLoggedIn, setLoggedIn] = useState(false)
-
+  const [email, setEmail] = useState("")
   return (
     <Router>
     <div className="App">
@@ -24,18 +20,13 @@ function App() {
           <Landing/>
         </Route>
         <Route path="/login">
-          <Login setLoggedIn={setLoggedIn}/>
+          <Login setLoggedIn={setLoggedIn} setLogInEmail={setEmail}/>
         </Route>
         <Route path="/signup">
           <Signup setLoggedIn={setLoggedIn}/>
         </Route>
-<<<<<<< HEAD
         <Route path = "/chat">
-          <Chat/>
-=======
-        <Route path="/logout">
-          <Logout/>
->>>>>>> c90e0bb13d3a0b9fd482357f6c9c2d4aa848b4d8
+          <Chat email={email}/>
         </Route>
       </Switch>
     </div>

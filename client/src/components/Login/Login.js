@@ -2,7 +2,7 @@ import "./Login.css"
 import {Link, useHistory} from "react-router-dom"
 import { useState } from "react"
 import axios from 'axios'
-const Login = ({setLoggedIn}) => {
+const Login = ({setLoggedIn, setLogInEmail}) => {
     const history = useHistory()
     const [email, setEmail] = useState("")
     const [pswd, setPswd] = useState("")
@@ -19,6 +19,7 @@ const Login = ({setLoggedIn}) => {
         .then((res)=> {
             sessionStorage.setItem(email, res.data)
             setLoggedIn(true)
+            setLogInEmail(email)
             history.push("/")
         })
         .catch((err)=> console.log(err))
