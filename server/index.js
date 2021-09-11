@@ -17,6 +17,7 @@ const io = new Server(server, {
         methods: ["GET", "POST"]
     },
 });
+
 require('./routes/chat.js')(app, io);
 const port = process.env.PORT || 8080
 const authRoute = require('./routes/auth');
