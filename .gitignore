@@ -14,3 +14,6 @@ pids
 *.pid
 *.seed
 *.pid.lock
+package-lock.json
+server/package-lock.json
+client/package-lock.json

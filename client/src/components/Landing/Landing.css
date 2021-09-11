@@ -1,0 +1,97 @@
+
+.landing{
+    height: 92vh;
+    background-image: linear-gradient(#FFFFFF, #26C2AD);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 9vh;
+
+
+}
+
+.landing .container {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+ .landing .productive{
+        background-image: linear-gradient(to right, #ABECD6 , #FBED96);
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+ }
+
+ .landing .study{
+        background-image: linear-gradient(to right, #2BC0E4 , #EAECC6);
+        display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.landing .motivated {
+    background-image: linear-gradient(to right, #1A2980, #26D0CE);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+ .landing div{
+    color: white;
+    height: 15vh;
+    width: 40vw;
+    border-radius: 12px;
+    border: none; 
+    
+    
+  }
+
+  .motivatedDescription{
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+      gap: 10px;
+      justify-content: center;
+
+
+  }
+
+
+  .studyDescription{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 10px;
+    justify-content: center;
+}
+
+
+
+.productiveDescription{
+    display: flex;
+    flex-direction: column;
+    width:2vw;
+    margin-left: 10px;
+    gap: 10px;
+    justify-content: center;
+
+}
+
+
+
+
+  
+
+  
+ 
+ 
+
+
+
+
