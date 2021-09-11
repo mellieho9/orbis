@@ -18,9 +18,7 @@ const Landing = () => {
              <h6>Using our pomodoro timer, you can accomplish what you want to do in the way you want</h6>
              </div>
 
-             <div className = "productiveImage">
              <img src={watch} alt="watch" width="100" height="100"></img>
-             </div>
              
          </div>
 
@@ -30,9 +28,7 @@ const Landing = () => {
              <h6>Create a room, select games, set background music, and invite your friends for your DREAM study session</h6>
             </div>
 
-            <div className = "studyImages">
             <img src={study} alt="study" width="100" height="100"></img>
-            </div>
    
          </div>
 
@@ -42,9 +38,7 @@ const Landing = () => {
              <h6>Check out our motivational corner for study inspo, tips, and our Orbis community!</h6>
              </div>
 
-             <div className = "motivatedImage">
              <img src={motivated} alt="motivated" width="100" height="100"></img>
-             </div>
              
     
          </div>

@@ -11,7 +11,7 @@ nav img {
 
 nav ul {
     margin-right: 10vw;
-    width: 13vw;
+    width: 15vw;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -28,10 +28,23 @@ nav ul a:hover {
     color: #ccc;
 }
 
+nav ul button {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+nav ul button:hover {
+    color: #ccc;
+}
+/* 
 nav a:nth-child(2) {
     background: #00474B;
     border-radius: 45px;
     color: #fff;
     padding: 10px 15px;
-}
+} */
 

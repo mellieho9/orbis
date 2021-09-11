@@ -5,6 +5,7 @@ import Signup from "./components/SignUp/SignUp"
 import Login from "./components/Login/Login"
 import Landing from "./components/Landing/Landing"
 import {useState} from "react"
+import Logout from "./components/Logout/Logout"
 
 function App() {
 
@@ -13,7 +14,7 @@ function App() {
   return (
     <Router>
     <div className="App">
-      <Navbar/>
+      <Navbar isLoggedIn={isLoggedIn} setLoggedIn={setLoggedIn}/>
       <Switch>
         <Route exact path="/">
           <Landing/>
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route path="/signup">
           <Signup setLoggedIn={setLoggedIn}/>
+        </Route>
+        <Route path="/logout">
+          <Logout/>
         </Route>
       </Switch>
     </div>
