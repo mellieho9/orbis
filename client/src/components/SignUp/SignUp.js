@@ -4,7 +4,7 @@ import {ArrowRightIcon} from "evergreen-ui"
 import { useState } from "react"
 import axios from 'axios'
 
-const SignUp = ({setLoggedIn}) => {
+const SignUp = ({setLoggedIn, setLogInEmail}) => {
     const history = useHistory()
     const [email, setEmail] = useState("")
     const [pswd, setPswd] = useState("")
@@ -15,6 +15,7 @@ const SignUp = ({setLoggedIn}) => {
             "email": email,
             "password": pswd
         }
+        const emailToStore = email
         setEmail("")
         setPswd("")
         await axios.post("http://localhost:8080/api/user/register", body)
@@ -23,8 +24,9 @@ const SignUp = ({setLoggedIn}) => {
 
         await axios.post("http://localhost:8080/api/user/login", body)
         .then((res)=> {
-            sessionStorage.setItem(email, res.data)
+            sessionStorage.setItem("token", res.data)
             setLoggedIn(true)
+            setLogInEmail(emailToStore)
             history.push("/")
         })
         .catch((err)=> console.log(err))

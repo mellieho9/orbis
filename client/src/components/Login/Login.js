@@ -13,13 +13,14 @@ const Login = ({setLoggedIn, setLogInEmail}) => {
             "email": email,
             "password": pswd
         }
+        const emailToStore = email
         setEmail("")
         setPswd("")
         await axios.post("http://localhost:8080/api/user/login", body)
         .then((res)=> {
-            sessionStorage.setItem(email, res.data)
+            sessionStorage.setItem("token", res.data)
             setLoggedIn(true)
-            setLogInEmail(email)
+            setLogInEmail(emailToStore)
             history.push("/")
         })
         .catch((err)=> console.log(err))

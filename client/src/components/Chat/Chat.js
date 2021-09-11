@@ -2,11 +2,12 @@ import React, {useState, useEffect} from "react";
 import io from "socket.io-client";
 const ENDPOINT = "http://127.0.0.1:8080";
 
-const Chat = ({email}) =>{
+const Chat = () =>{
     const [response, setResponse] = useState("");
     useEffect(() => {
 
-        const token = sessionStorage.getItem(email);
+        const token = sessionStorage.getItem("token");
+        console.log(token)
         const socket = io(ENDPOINT, { transport: ["websocket"], query: {token}});
         socket.on("message", data => {
             setResponse(data);

@@ -18,15 +18,16 @@ function App() {
       <Switch>
         <Route exact path="/">
           <Landing/>
+
         </Route>
         <Route path="/login">
           <Login setLoggedIn={setLoggedIn} setLogInEmail={setEmail}/>
         </Route>
         <Route path="/signup">
-          <Signup setLoggedIn={setLoggedIn}/>
+          <Signup setLoggedIn={setLoggedIn} setLogInEmail={setEmail}/>
         </Route>
         <Route path = "/chat">
-          <Chat email={email}/>
+          <Chat/>
         </Route>
       </Switch>
     </div>
