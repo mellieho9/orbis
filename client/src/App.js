@@ -1,4 +1,6 @@
 import './App.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom"
 import Navbar from "./components/Navbar/Navbar"
 import Signup from "./components/SignUp/SignUp"
@@ -8,8 +10,8 @@ import {useState} from "react"
 import Home from "./components/Home/Home"
 import Chatnew from "./components/Chat/Chatnew"
 import LoggedInNav from './components/LoggedInNav/LoggedInNav';
+import TimerParent from "./components/Timer/TimerParent"
 
-// import Chat from "./components/Chat/Chat";
 function App () {
 
     const [isLoggedIn, setLoggedIn] = useState(false)

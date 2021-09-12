@@ -1,7 +1,7 @@
 import "./Home.css"
 import check from '../../assets/images/check.svg'
 import square from '../../assets/images/square.svg'
-
+import {UnorderedList, ListItem, TickIcon} from "evergreen-ui"
 
 const Home = () => {
     return (
@@ -58,16 +58,13 @@ const Home = () => {
                         <h1>$0</h1>
                         <button>Get Started</button>
 
-                        <h4>With the free plan comes:</h4>
 
-                        <div className = "freeFeatures">
-                            <h4>- Create rooms with limited pariticipants</h4>
-                            <h4>- Join public and private rooms to meet new people or work with your peers</h4>
-                            <h4>- Watch content on motivational corner to ensure meaningful breaks</h4>
-                            <h4>- Work for 25 minutes and take 5 minute breaks using the pomodoro timer</h4>
-                            
-                        </div>
-
+                        <UnorderedList icon={TickIcon} iconColor="success" >
+                            <ListItem>Create rooms with limited pariticipants</ListItem>
+                            <ListItem>Join public and private rooms to meet new people or work with your peers</ListItem>
+                            <ListItem>Watch content on motivational corner to ensure meaningful breaks</ListItem>
+                            <ListItem>Work for 25 minutes and take 5 minute breaks using the pomodoro timer</ListItem>
+                        </UnorderedList>
                         
         
                     </div>
@@ -76,14 +73,12 @@ const Home = () => {
                         <h2>Premium</h2>
                         <h1>$4 /month</h1>
                         <button>Get Started</button>
-                        <h4>With the premium plan comes:</h4>
-                        <div className = "paidFeatures">
-                            <h4>- Create unlimited rooms with unlimited participants</h4>
-                            <h4>- Join public and private rooms to meet new people or work with your peers</h4>
-                            <h4>- Access inspirational content on the motivational conent, play music during study sessions, and more</h4>
-                            <h4>- Customizable pomodoro timers and choose how long you study and take breaks</h4>
-
-                        </div>
+                        <UnorderedList icon={TickIcon} iconColor="success" >
+                            <ListItem style={{width:"30vw"}}>Create unlimited rooms with unlimited participants</ListItem>
+                            <ListItem style={{width:"30vw"}}>Join public and private rooms to meet new people or work with your peers</ListItem>
+                            <ListItem style={{width:"30vw"}}>Access inspirational content on the motivational conent, play music during study sessions, and more</ListItem>
+                            <ListItem style={{width:"30vw"}}>Customizable pomodoro timers and choose how long you study and take breaks</ListItem>
+                        </UnorderedList>
                     </div>
                 </div>
 

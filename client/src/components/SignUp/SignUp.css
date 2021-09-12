@@ -67,3 +67,40 @@
     display: flex;
     align-items: center;
 }
+
+.signupParent {
+    display: flex;
+}
+
+.signupLeft {
+    height: 92vh;
+    width: 50vw;
+    background-color: #0C9380;
+    background-image: url("../../assets/images/graphic.png");
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 7vh;
+}
+
+.signupLeft p {
+    width: 30vw;
+    color: #FFF;
+    font-size: 1.4rem;
+    font-weight: lighter;
+}
+
+.leftText {
+    width: 50vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.leftText img {
+    padding: 10px;
+    background-color: #76D9CB;
+    border-radius: 8px;
+}

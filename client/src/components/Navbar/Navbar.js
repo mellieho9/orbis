@@ -5,7 +5,7 @@ import logo from "../../assets/images/ORBIS.png"
 const Navbar = () => {
 
     return (
-        <nav>
+        <nav className="navmine">
             <Link to="/"><img src={logo} alt="logo" height="50px" width="143px" /></Link>
             <ul style={{width: "13vw"}}>
                 <Link to="/login"><li>Login</li></Link>

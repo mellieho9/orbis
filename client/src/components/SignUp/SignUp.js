@@ -4,6 +4,9 @@ import {ArrowRightIcon} from "evergreen-ui"
 import { useState } from "react"
 import axios from 'axios'
 import logo from "../../assets/images/ORBIS.png"
+import calendar from "../../assets/images/calendar.svg"
+import timer from "../../assets/images/timer.svg"
+import trophy from "../../assets/images/trophy.svg"
 
 const SignUp = ({setLoggedIn, setLogInEmail}) => {
     const history = useHistory()
@@ -36,12 +39,20 @@ const SignUp = ({setLoggedIn, setLogInEmail}) => {
 
     return (
         <div className="signupParent">
-        <div>
-            <div className="logobox">
-                <img src={logo} alt="logo" height="200px" width="200px"/>
-                <h2>ORBIS</h2>
-            </div>   
-                 
+        <div className="signupLeft">
+            <div className="leftText">
+                <img src={timer} alt="timer icon" width="80px" height="80px"/>
+                <p>Using the Pomodoro Timer, you can pace out your work in manageable intervals</p>
+            </div>
+            <div className="leftText">
+                <img src={calendar} alt="calendar icon" width="80px" height="80px"/>
+                <p>Create a room, set background music, and invite your friends over from your DREAM study session</p>
+            </div>
+            <div className="leftText">
+                <img src={trophy} alt="trophy icon" width="80px" height="80px"/>
+                <p>Want straight As? Check out out motivation corner for images and videos to help you through!</p>
+            </div>
+
         </div>
         <div className="signup">
             <form>

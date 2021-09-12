@@ -8,7 +8,7 @@ const Landing = () => {
     return (
    
         <div className = "landing">
-            <h1>Hello, what are you up to?</h1>
+            <h1>Let's get started!</h1>
 
          <div className="container">
              

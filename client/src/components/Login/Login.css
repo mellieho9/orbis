@@ -34,7 +34,7 @@
  background-color: #00474B;
  color: #fff;
  border-radius: 12px;
-  
+font-size: 1.3rem;
 }
 
 .login .line {
@@ -51,11 +51,16 @@
 }
 
 .loginWrapper{
-    height: 92vh;
+    height: 80vh;
     align-items: center;
     display: flex;
     justify-content: center;
 
+}
+
+.login p,
+.login a {
+    font-size: 1.5rem;
 }
 
 

@@ -1,0 +1,47 @@
+.timer {
+    height: 13vh;
+    width: 22vw;
+}
+
+.timerBox {
+    height: 9vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 3rem;
+    font-weight: bolder;
+}
+
+.timerBox button {
+    background: #00474B;
+border-radius: 45px;
+color: #FFF;
+    border: none;
+    padding: 10px 19px;
+    cursor: pointer;
+}
+
+.time,
+.controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.controls {
+    width: 10vw;
+}
+
+.timerOptions {
+    height: 4vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.timerOptions p {
+    cursor: pointer;
+    font-size: 1.2rem;
+}

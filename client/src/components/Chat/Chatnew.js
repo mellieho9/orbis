@@ -1,6 +1,12 @@
 import io from "socket.io-client";
-import { useRef, useEffect } from "react";
-
+import { useRef, useEffect, useState } from "react";
+import "./Chat.css"
+import {Link} from "react-router-dom"
+import {CrossIcon, FullscreenIcon, VolumeDownIcon} from "evergreen-ui"
+import TimerParent from "../Timer/TimerParent";
+import Motivate from "../Motivate/Motivate";
+import cam from "../../assets/images/cam.svg"
+import mic from "../../assets/images/mic.svg"
 
 const ENDPOINT = "http://127.0.0.1:8080";
 
@@ -113,7 +119,7 @@ const Chatnew = () => {
 
     function showVideoConference() {
         roomSelectionContainer.current.style = 'display: none'
-        videoChatContainer.current.style = 'display: block'
+        videoChatContainer.current.style = 'display: flex'
     }
 
     useEffect(()=> {
@@ -172,17 +178,50 @@ const Chatnew = () => {
     }, [])
 
     return (
-        <div>
-        <div id="room-selection-container" ref={roomSelectionContainer} className="centered">
-            <h1>WebRTC video conference</h1>
-            <label>Enter the number of the room you want to connect</label>
+
+        <div className="chat">
+        <div id="room-selection-container" ref={roomSelectionContainer} className="centered roomNo">
+            <h1>Enter your Room Code</h1>
             <input id="room-input" ref={roomInput} type="text"/>
             <button id="connect-button" ref={connectButton} onClick={()=>joinRoom(roomInput.current.value)}>CONNECT</button>
         </div>
 
-        <div id="video-chat-container" ref={videoChatContainer} className="video-position" style={{display: "none"}}>
-            <video id="local-video" ref={localVideoComponent} autoPlay="autoplay" muted="muted"></video>
-            <video id="remote-video" ref={remoteVideoComponent} autoPlay="autoplay"></video>
+        <div id="video-chat-container" ref={videoChatContainer} className="video-position video" style={{display: "none"}}>
+            <div className="sidebar">
+                <TimerParent/>
+                <div className="sidebarControls">
+                    <div className="left">
+
+                    <VolumeDownIcon/>
+                    <input type="range" />
+                    </div>
+                    <div className="right">
+
+                    <img src={mic} alt="mic icon" />
+                    <img src={cam} alt="cam icon" />
+                    </div>
+                </div>
+                <Motivate/>
+            </div>
+            <div className="bothVids">
+                <div className="videoheader">
+                    <FullscreenIcon style={{color: "#FFF", cursor: "pointer"}} onClick={()=>{
+                        if (!document.fullscreenElement) {
+                            videoChatContainer.current.requestFullscreen().catch(err => {
+                              alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+                            });
+                          } else {
+                            document.exitFullscreen();
+                          }
+                        
+                        }}/>
+                    <Link to="/"><CrossIcon/> &nbsp;Exit</Link>
+                </div>
+                <div className="vidWrapper">
+                    <video id="local-video" ref={localVideoComponent} autoPlay="autoplay" muted="muted"></video>
+                    <video id="remote-video" ref={remoteVideoComponent} autoPlay="autoplay"></video>
+                </div>
+            </div>
         </div>
     </div>
     )

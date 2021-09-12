@@ -1,15 +1,15 @@
-nav {
+.navmine {
     height: 8vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav img {
+.navmine img {
     margin-left: 10vw;
 }
 
-nav ul {
+.navmine ul {
     margin-right: 10vw;
     width: 15vw;
     list-style: none;
@@ -18,17 +18,17 @@ nav ul {
     align-items: center;
 }
 
-nav ul a {
+.navmine ul a {
     color: #000;
     text-decoration: none;
     font-size: 1.2rem;
 }
 
-nav ul a:hover {
+.navmine ul a:hover {
     color: #ccc;
 }
 
-nav ul button {
+.navmine ul button {
     color: #000;
     text-decoration: none;
     font-size: 1.2rem;
@@ -37,7 +37,7 @@ nav ul button {
     cursor: pointer;
 }
 
-nav ul button:hover {
+.navmine ul button:hover {
     color: #ccc;
 }
 /* 

@@ -31,8 +31,8 @@ const Login = ({setLoggedIn, setLogInEmail}) => {
 
         <div className = "loginWrapper">
             <div className = "login">
-                <h1>Orbis</h1>
-                <h2>Enter motto here</h2>
+                {/* <h1>Orbis</h1> */}
+                <img src={logo} alt="logo" height="80px" width="209px"/>
                 <input type="text" name="email" placeholder="example@email.com" value={email} onChange={(e)=>setEmail(e.target.value)}/>
                 <input type="password" name="password" placeholder="●●●●●●●●●●●●" value={pswd} onChange={(e)=>setPswd(e.target.value)}/>
                 <button onClick={(e)=>submitHandler(e)}>Login</button>

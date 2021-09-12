@@ -1,0 +1,117 @@
+.roomNo {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.roomNo input {
+    width: 20vw;
+    height: 5vh;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.37);
+}
+
+.roomNo button {
+    width: 20vw;
+    height: 5vh;
+    border-radius: 50px;
+    border: none;
+    background: #00474B;
+    color: #FFF;
+}
+
+.chat .video {
+    height: 92vh;
+    width: 100%;
+    background: linear-gradient(0deg, #50525F, #50525F), linear-gradient(180deg, #4BB2B8 0%, #172B5E 100%);
+    display: flex;
+}
+
+.chat .sidebar {
+    height: 92vh;
+    width: 30vw;
+    background-color: #FFF;
+}
+
+#local-video {
+    height: 300px;
+    border-radius: 15px;
+    border: 2px solid #FFFFFF;
+}
+
+#remote-video {
+    height: 0;
+    width: 0;
+}
+
+.bothVids {
+    height: 92vh;
+    width: 70vw;
+}
+
+.videoheader {
+    height: 7vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 30px;
+}
+
+.videoheader a {
+    background: rgba(255, 255, 255, 0.37);
+    border-radius: 45px;
+    color: #FFF;
+    padding: 15px 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+
+}
+
+.vidWrapper {
+    height: 85vh;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1fr);
+    grid-template-rows: repeat(auto-fill, 1fr);
+    row-gap: 5vh;
+    column-gap: 3vh;
+    justify-items: center;
+    align-items: center;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.sidebarControls {
+    width: 30vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.sidebarControls input {
+    width: 10vw;
+}
+
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.right {
+    width: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
