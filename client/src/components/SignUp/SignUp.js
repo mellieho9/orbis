@@ -3,6 +3,7 @@ import {Link, useHistory} from "react-router-dom"
 import {ArrowRightIcon} from "evergreen-ui"
 import { useState } from "react"
 import axios from 'axios'
+import logo from "../../assets/images/ORBIS.png"
 
 const SignUp = ({setLoggedIn, setLogInEmail}) => {
     const history = useHistory()
@@ -19,21 +20,29 @@ const SignUp = ({setLoggedIn, setLogInEmail}) => {
         setEmail("")
         setPswd("")
         await axios.post("http://localhost:8080/api/user/register", body)
-        .then((res)=> console.log(res.data))
-        .catch((err)=> console.log(err))
+            .then((res)=> console.log(res.data))
+            .catch((err)=> console.log(err))
 
         await axios.post("http://localhost:8080/api/user/login", body)
-        .then((res)=> {
-            sessionStorage.setItem("token", res.data)
-            setLoggedIn(true)
-            setLogInEmail(emailToStore)
-            history.push("/")
-        })
-        .catch((err)=> console.log(err))
+            .then((res)=> {
+                sessionStorage.setItem("token", res.data)
+                setLoggedIn(true)
+                setLogInEmail(emailToStore)
+                history.push("/")
+            })
+            .catch((err)=> console.log(err))
 
     }
 
     return (
+        <div className="signupParent">
+        <div>
+            <div className="logobox">
+                <img src={logo} alt="logo" height="200px" width="200px"/>
+                <h2>ORBIS</h2>
+            </div>   
+                 
+        </div>
         <div className="signup">
             <form>
                 <h1>Sign up</h1>
@@ -47,6 +56,7 @@ const SignUp = ({setLoggedIn, setLogInEmail}) => {
                 <p>Have an account?</p>
                 <Link to="/login">Log In <ArrowRightIcon></ArrowRightIcon></Link>
             </div>
+        </div>
         </div>
     )
 }

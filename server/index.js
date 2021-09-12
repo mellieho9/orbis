@@ -1,11 +1,11 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require("cors");
 app.use(cors());
 const bodyParser = require('body-parser');
-dotenv.config({path:'server/.env'});
+dotenv.config({path:'.env'});
 mongoose.connect(
     process.env.DB_CONNECTION, {useNewURLParser:true}, ()=> console.log('connected to db!')
     );
@@ -17,6 +17,7 @@ const io = new Server(server, {
         methods: ["GET", "POST"]
     },
 });
+
 require('./routes/chat.js')(app, io);
 const port = process.env.PORT || 8080
 const authRoute = require('./routes/auth');
