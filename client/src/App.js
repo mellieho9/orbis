@@ -7,7 +7,9 @@ import Landing from "./components/Landing/Landing"
 import {useState} from "react"
 import Logout from "./components/Logout/Logout"
 import Home from "./components/Home/Home"
+
 import Chat from "./components/Chat/Chat";
+
 
 function App() {
 
@@ -19,9 +21,8 @@ function App() {
       <Navbar isLoggedIn={isLoggedIn} setLoggedIn={setLoggedIn}/>
       <Switch>
         <Route exact path="/">
-          <Landing/>
+          {/* <Landing/> */}
           <Home/>
-
         </Route>
         <Route path="/login">
           <Login setLoggedIn={setLoggedIn} setLogInEmail={setEmail}/>
