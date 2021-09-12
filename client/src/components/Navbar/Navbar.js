@@ -14,7 +14,7 @@ const Navbar = ({isLoggedIn, setLoggedIn}) => {
 
     return (
         <nav>
-            <img src={logo} alt="logo" height="60px" width="60px" />
+            <Link to="/"><img src={logo} alt="logo" height="60px" width="60px" /></Link>
             {isLoggedIn
             ?<ul>
                 <Link to="/signup" style={{background:"#00474B", borderRadius: "45px", color: "#FFF", padding: "10px 15px"}}><li>Create Rooms</li></Link>

@@ -7,11 +7,12 @@ import Landing from "./components/Landing/Landing"
 import {useState} from "react"
 import Logout from "./components/Logout/Logout"
 import Home from "./components/Home/Home"
+import Chat from "./components/Chat/Chat";
 
 function App() {
 
   const [isLoggedIn, setLoggedIn] = useState(false)
-
+  const [email, setEmail] = useState("")
   return (
     <Router>
     <div className="App">
@@ -20,15 +21,16 @@ function App() {
         <Route exact path="/">
           <Landing/>
           <Home/>
+
         </Route>
         <Route path="/login">
-          <Login setLoggedIn={setLoggedIn}/>
+          <Login setLoggedIn={setLoggedIn} setLogInEmail={setEmail}/>
         </Route>
         <Route path="/signup">
-          <Signup setLoggedIn={setLoggedIn}/>
+          <Signup setLoggedIn={setLoggedIn} setLogInEmail={setEmail}/>
         </Route>
-        <Route path="/logout">
-          <Logout/>
+        <Route path = "/chat">
+          <Chat/>
         </Route>
       </Switch>
     </div>
