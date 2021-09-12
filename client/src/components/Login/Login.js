@@ -1,4 +1,5 @@
 import "./Login.css"
+import logo from "../../assets/images/ORBIS.png"
 import {Link, useHistory} from "react-router-dom"
 import { useState } from "react"
 import axios from 'axios'
@@ -27,6 +28,23 @@ const Login = ({setLoggedIn, setLogInEmail}) => {
     }
 
     return (
+<<<<<<< HEAD
+=======
+      
+ <div className = "loginWrapper">
+           <div className = "login">
+            <img src={logo} alt="logo" height="200px" width="200px"/>
+            <h2>LOGIN</h2>
+            <input type="text" name="email" placeholder="example@email.com" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+            <input type="password" name="password" placeholder="●●●●●●●●●●●●" value={pswd} onChange={(e)=>setPswd(e.target.value)}/>
+            <button onClick={(e)=>submitHandler(e)}>Login</button>
+            
+            <div className="line"></div>
+
+            <div className = "notLogin">
+                <p>No account?</p>
+                <Link to = "/signup">Sign Up</Link>
+>>>>>>> 5bf672c434f0efa164e72f6fa2899da042a905fe
 
         <div className = "loginWrapper">
             <div className = "login">
