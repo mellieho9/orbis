@@ -7,9 +7,9 @@ const Home = () => {
     return (
         <div className = "home">
            <div className = "header">
-           <h1>Orbis</h1>
+           <h1>Study at your own pace without ever worrying about finding a study group!</h1>
 
-            <h4>Follow the pomodoro method while studying with friends and take meaningful breaks that avoid procastionation! This is your one stop to meet new people and study smarter using the pomodoro method</h4>
+            <h3>This is your one stop to meet new people. 👩‍💻 Create a room and share the link with your peers! 🚪 Log in using the link at any time and find other available peers to study with!🔑</h3>
 
             </div>
 
