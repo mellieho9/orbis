@@ -9,7 +9,8 @@ import Home from "./components/Home/Home"
 import Chatnew from "./components/Chat/Chatnew"
 import LoggedInNav from './components/LoggedInNav/LoggedInNav';
 
-function App() {
+// import Chat from "./components/Chat/Chat";
+
 
     const [isLoggedIn, setLoggedIn] = useState(false)
     const [email, setEmail] = useState("")

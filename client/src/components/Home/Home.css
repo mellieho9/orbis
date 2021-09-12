@@ -1,27 +1,36 @@
 .home{
-    height: 92vh;
+    min-height: 92vh;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
+    overflow-x: hidden;
  
     
 }
 
 .header{
     display: flex;
+    width: 100%;
     flex-direction: column;
     height: 92vh;
     align-items: center;
     justify-content: center;
     background-image: linear-gradient(#FFFFFF, #D0EEEA);
+    gap: 5vh;
     
 }
 
 .header h4{
-    width: 80vw;
+    width: 60vw;
+    align-items: center;
+    justify-content: center;
+
 }
+
+
 
 .plans{
     display: flex;
@@ -29,6 +38,7 @@
     flex-direction: column;
     align-items: center;
     gap: 80px;
+    margin-top: 20vh;
     
 
 }
@@ -47,6 +57,11 @@
     align-items: center;
     gap: 20px;
 }
+
+ .free h4{
+     width: 18vw;
+     align-items: center;
+ }
 
 .paid{
     display: flex;
@@ -76,21 +91,33 @@
 .freeFeatures{
     display: flex;
     flex-direction: column;
-    align-items: left;
+    align-items: center;
+    width: 19vw;
+
+}
+
+.paidFeatures{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20vw;
 }
 
 .features{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10vh;;
+    justify-content: center;
+    gap: 10vh;
 }
 
 .twoFeatures{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     gap: 10vw;
+    margin-left: 10vw;
 
 }
 
@@ -106,5 +133,7 @@
     flex-direction: row;
     align-items: center;
     gap: 10vw;
+    justify-content: center;
+    margin-left: 10vw;
 
 }
