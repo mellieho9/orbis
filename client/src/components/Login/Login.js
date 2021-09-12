@@ -13,37 +13,38 @@ const Login = ({setLoggedIn, setLogInEmail}) => {
             "email": email,
             "password": pswd
         }
+        const emailToStore = email
         setEmail("")
         setPswd("")
         await axios.post("http://localhost:8080/api/user/login", body)
-        .then((res)=> {
-            sessionStorage.setItem(email, res.data)
-            setLoggedIn(true)
-            setLogInEmail(email)
-            history.push("/")
-        })
-        .catch((err)=> console.log(err))
+            .then((res)=> {
+                sessionStorage.setItem("token", res.data)
+                setLoggedIn(true)
+                setLogInEmail(emailToStore)
+                history.push("/")
+            })
+            .catch((err)=> console.log(err))
     }
 
     return (
-      
- <div className = "loginWrapper">
-           <div className = "login">
-            <h1>Orbis</h1>
-            <h2>Enter motto here</h2>
-            <input type="text" name="email" placeholder="example@email.com" value={email} onChange={(e)=>setEmail(e.target.value)}/>
-            <input type="password" name="password" placeholder="●●●●●●●●●●●●" value={pswd} onChange={(e)=>setPswd(e.target.value)}/>
-            <button onClick={(e)=>submitHandler(e)}>Login</button>
-            
-            <div className="line"></div>
 
-            <div className = "notLogin">
-                <p>No account?</p>
-                <Link to = "/signup">Sign Up</Link>
+        <div className = "loginWrapper">
+            <div className = "login">
+                <h1>Orbis</h1>
+                <h2>Enter motto here</h2>
+                <input type="text" name="email" placeholder="example@email.com" value={email} onChange={(e)=>setEmail(e.target.value)}/>
+                <input type="password" name="password" placeholder="●●●●●●●●●●●●" value={pswd} onChange={(e)=>setPswd(e.target.value)}/>
+                <button onClick={(e)=>submitHandler(e)}>Login</button>
 
+                <div className="line"></div>
+
+                <div className = "notLogin">
+                    <p>No account?</p>
+                    <Link to = "/signup">Sign Up</Link>
+
+                </div>
             </div>
         </div>
- </div>
 
     )
 }
