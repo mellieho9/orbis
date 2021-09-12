@@ -5,6 +5,8 @@ import Signup from "./components/SignUp/SignUp"
 import Login from "./components/Login/Login"
 import Landing from "./components/Landing/Landing"
 import {useState} from "react"
+import Logout from "./components/Logout/Logout"
+import Home from "./components/Home/Home"
 import Chat from "./components/Chat/Chat";
 
 function App() {
@@ -18,6 +20,7 @@ function App() {
                 <Switch>
                     <Route exact path="/">
                         <Landing/>
+                        <Home/>
 
                     </Route>
                     <Route path="/login">
