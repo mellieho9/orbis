@@ -9,7 +9,7 @@ const Home = () => {
            <div className = "header">
            <h1>Orbis</h1>
 
-            <h4>Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</h4>
+            <h4>Follow the pomodoro method while studying with friends and take meaningful breaks that avoid procastionation! This is your one stop to meet new people and study smarter using the pomodoro method</h4>
 
             </div>
 
@@ -19,14 +19,14 @@ const Home = () => {
                 <div className = "twoFeatures">
                     <div className = "oneFeature">
                     <img src={square} alt="square" width="30" height="30"></img>
-                    <h2>Lorem ipsum</h2>
-                    <h4>Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h4>
+                    <h2>Work harder, not smarter</h2>
+                    <h4>Using our pomodoro timer, you can accomplish what you want to do in the way you want</h4>
                     </div>
 
                     <div className = "twoFeature">
                     <img src={square} alt="square" width="30" height="30"></img>
-                    <h2>Lorem ipsum</h2>
-                    <h4>Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h4> 
+                    <h2>Stay Social and Productive</h2>
+                    <h4>Create a room, select games, set background music, and invite your friends for your DREAM study session</h4> 
                     </div>
 
                 </div>
@@ -34,14 +34,14 @@ const Home = () => {
                 <div className = "otherTwoFeatures">
                     <div className = "threeFeature">
                     <img src={square} alt="square" width="30" height="30"></img>
-                    <h2>Lorem ipsum</h2>
-                    <h4>Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h4>
+                    <h2>Inspiration</h2>
+                    <h4>Want straight As? Check out our motivational corner for study inspo, tips, and our Orbis community!</h4>
                     </div>
 
                     <div className = "fourFeature">
                     <img src={square} alt="square" width="30" height="30"></img>
-                    <h2>Lorem ipsum</h2>
-                    <h4>Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h4> 
+                    <h2>Do You Procastinate?</h2>
+                    <h4>Instead of scrolling through Tiktok for endless procastionation, watch some motivational content during your breaks!</h4> 
                     </div>
 
                 </div>
@@ -58,13 +58,14 @@ const Home = () => {
                         <h1>$0</h1>
                         <button>Get Started</button>
 
-                        <h4>Loren ipsum dolar</h4>
+                        <h4>With the free plan comes:</h4>
 
                         <div className = "freeFeatures">
-                            <h4>Loren ipsum dolar</h4>
-                            <h4>Loren ipsum dolar</h4>
-                            <h4>Loren ipsum dolar</h4>
-                            <h4>Loren ipsum dolar</h4>
+                            <h4>- Create rooms with limited pariticipants</h4>
+                            <h4>- Join public and private rooms to meet new people or work with your peers</h4>
+                            <h4>- Watch content on motivational corner to ensure meaningful breaks</h4>
+                            <h4>- Work for 25 minutes and take 5 minute breaks using the pomodoro timer</h4>
+                            
                         </div>
 
                         
@@ -72,15 +73,15 @@ const Home = () => {
                     </div>
 
                     <div className = "paid">
-                        <h2>Paid</h2>
+                        <h2>Premium</h2>
                         <h1>$4 /month</h1>
                         <button>Get Started</button>
-                        <h4>Loren Ipsum Dolar</h4>
+                        <h4>With the premium plan comes:</h4>
                         <div className = "paidFeatures">
-                            <h4>Loren ipsum dolar</h4>
-                            <h4>Loren ipsum dolar</h4>
-                            <h4>Loren ipsum dolar</h4>
-                            <h4>Loren ipsum dolar</h4>
+                            <h4>- Create unlimited rooms with unlimited participants</h4>
+                            <h4>- Join public and private rooms to meet new people or work with your peers</h4>
+                            <h4>- Access inspirational content on the motivational conent, play music during study sessions, and more</h4>
+                            <h4>- Customizable pomodoro timers and choose how long you study and take breaks</h4>
 
                         </div>
                     </div>

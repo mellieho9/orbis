@@ -8,7 +8,7 @@ import {useState} from "react"
 import Logout from "./components/Logout/Logout"
 import Home from "./components/Home/Home"
 
-import Chat from "./components/Chat/Chat";
+// import Chat from "./components/Chat/Chat";
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
           <Signup setLoggedIn={setLoggedIn} setLogInEmail={setEmail}/>
         </Route>
         <Route path = "/chat">
-          <Chat/>
+          {/* <Chat/> */}
         </Route>
       </Switch>
     </div>
