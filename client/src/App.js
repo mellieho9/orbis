@@ -5,9 +5,9 @@ import Signup from "./components/SignUp/SignUp"
 import Login from "./components/Login/Login"
 import Landing from "./components/Landing/Landing"
 import {useState} from "react"
-import Logout from "./components/Logout/Logout"
 import Home from "./components/Home/Home"
-import Chat from "./components/Chat/Chat";
+import Chatnew from "./components/Chat/Chatnew"
+import LoggedInNav from './components/LoggedInNav/LoggedInNav';
 
 function App() {
 
@@ -16,12 +16,10 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <Navbar isLoggedIn={isLoggedIn} setLoggedIn={setLoggedIn}/>
+                {isLoggedIn?<LoggedInNav setLoggedIn={setLoggedIn}/>:<Navbar/>}
                 <Switch>
                     <Route exact path="/">
-                        <Landing/>
-                        <Home/>
-
+                      {isLoggedIn?<Landing/>:<Home/>}
                     </Route>
                     <Route path="/login">
                         <Login setLoggedIn={setLoggedIn} setLogInEmail={setEmail}/>
@@ -30,7 +28,7 @@ function App() {
                         <Signup setLoggedIn={setLoggedIn} setLogInEmail={setEmail}/>
                     </Route>
                     <Route path = "/chat">
-                        <Chat/>
+                        <Chatnew/>
                     </Route>
                 </Switch>
             </div>

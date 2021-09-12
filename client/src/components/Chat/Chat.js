@@ -1,5 +1,4 @@
-import "./Login.css";
-import React, {useState, useEffect} from "react";
+import React, {useRef, useEffect} from "react";
 import io from "socket.io-client";
 const ENDPOINT = "http://127.0.0.1:8080";
 
@@ -9,7 +8,6 @@ const connectButton = document.getElementById('connect-button')
 const videoChatContainer = document.getElementById('video-chat-container')
 const localVideoComponent = document.getElementById('local-video')
 const remoteVideoComponent = document.getElementById('remote-video')
-const localVideoComponent = document.getElementById('local-video')
 
 const mediaConstraints = {
     audio: true,
@@ -31,16 +29,34 @@ const iceServers = {
     ],
 }
 
-connectButton.addEventListener('click', () => {
-    joinRoom(roomInput.value)
-})
+// connectButton.addEventListener('click', () => {
+//     joinRoom(roomInput.value)
+// })
+
+async function setLocalStream(mediaConstraints) {
+    let stream
+    try {
+      stream = await navigator.mediaDevices.getUserMedia(mediaConstraints)
+    } catch (error) {
+      console.error('Could not get user media', error)
+    }
+  
+    localStream = stream
+    localVideoComponent.srcObject = stream
+  }
+  
 
 const Chat = () =>{
-    const [response, setResponse] = useState("");
+    // const [response, setResponse] = useState("");
+    const btnConnect = useRef()
     useEffect(() => {
         const token = sessionStorage.getItem("token");
         console.log(token)
         const socket = io(ENDPOINT, { transport: ["websocket"], query: {token}});
+
+        btnConnect.current.addEventListener('click', () => {
+            joinRoom(roomInput.value)
+        })
 
         socket.on('room_created', async () => {
             console.log('Socket event callback: room_created')
@@ -163,19 +179,21 @@ const Chat = () =>{
             videoChatContainer.style = 'display: block'
         }
 
-        return () => socket.disconnect()
+        // return () => socket.disconnect()
 
     }, []);
+
+    
 
     return(<div>
         <div id="room-selection-container" className="centered">
             <h1>WebRTC video conference</h1>
             <label>Enter the number of the room you want to connect</label>
             <input id="room-input" type="text"/>
-            <button id="connect-button">CONNECT</button>
+            <button id="connect-button" ref={btnConnect}>CONNECT</button>
         </div>
 
-        <div id="video-chat-container" className="video-position" style="display: none">
+        <div id="video-chat-container" className="video-position" style={{display: "none"}}>
             <video id="local-video" autoPlay="autoplay" muted="muted"></video>
             <video id="remote-video" autoPlay="autoplay"></video>
         </div>
