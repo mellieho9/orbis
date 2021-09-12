@@ -5,7 +5,7 @@ const dotenv = require('dotenv');
 const cors = require("cors");
 app.use(cors());
 const bodyParser = require('body-parser');
-dotenv.config({path:'server/.env'});
+dotenv.config({path:'.env'});
 mongoose.connect(
     process.env.DB_CONNECTION, {useNewURLParser:true}, ()=> console.log('connected to db!')
     );
